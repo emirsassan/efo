@@ -27,6 +27,9 @@
                         <div class="card w-96 h-56 bg-neutral text-neutral-content">
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title">{projs.name}</h2>
+                                {#if projs.deprecated}
+                                    <div class="badge badge-secondary">Deprecated</div>
+                                {/if}
                                 <p>{projs.description}</p>
                                 <div class="card-actions justify-end">
                                     <a target="_blank" href={projs.url}>
